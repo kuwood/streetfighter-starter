@@ -30,7 +30,8 @@ body {
   transform: scaleX(-1);
   filter: FlipH;
   -ms-filter: "FlipH";
-  padding-left: 100px;
+  position: absolute;
+  left: 900px;
   -webkit-filter:hue-rotate(90deg);
   width: 659px;
   height: 494px;
