@@ -38,6 +38,46 @@ $(document).ready(function() {
       $('.ryu-still').show();
     }
   })
+// Hulk RYU stuff
+  $('.hulk-ryu').mouseenter(function() {
+    $('.hulk-ryu-still').hide();
+    $('.hulk-ryu-ready').show();
+  })
+  .mouseleave(function() {
+    $('.hulk-ryu-ready').hide();
+    $('.hulk-ryu-still').show();
+  })
+  $('.hulk-ryu').mousedown(function() {
+    playHadouken();
+    $('.hulk-ryu-ready').hide();
+    $('.hulk-ryu-throwing').show();
+    $('.hulk-ryu-hadouken').finish().show()
+      .animate(
+      {'right': '1220px'},
+      500,
+      function() {
+        $(this).hide();
+        $(this).css('right', '520px');
+      }
+    )
+  })
+  .mouseup(function() {
+    $('.hulk-ryu-throwing').hide();
+    $('.hulk-ryu-ready').show();
+  })
+  $('body').keydown(function(event) {
+    if (event.which == 86) {
+      $('.hulk-ryu-still').hide();
+      $('.hulk-ryu-ready').hide();
+      $('.hulk-ryu-cool').show();
+    }
+  })
+  .keyup(function(event) {
+    if (event.which == 86) {
+      $('.hulk-ryu-cool').hide();
+      $('.hulk-ryu-still').show();
+    }
+  })
 });
 function playHadouken() {
   $('#hadouken-sound')[0].volume = 0.5;
