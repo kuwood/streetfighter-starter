@@ -53,11 +53,11 @@ $(document).ready(function() {
     $('.hulk-ryu-throwing').show();
     $('.hulk-ryu-hadouken').finish().show()
       .animate(
-      {'right': '1220px'},
+      {'left': '300px'},
       500,
       function() {
         $(this).hide();
-        $(this).css('right', '520px');
+        $(this).css('left', '950px');
       }
     )
   })
